@@ -1,0 +1,27 @@
+package helloworld;
+
+import javax.swing.JOptionPane;
+
+public class HelloWorldJava {
+
+	public static void main(String[] args) {
+		int m,f; String x,y; double avr;
+		try{
+		x = JOptionPane.showInputDialog(null, "Midterm");
+		y = JOptionPane.showInputDialog(null, "Finals");
+		m = Integer.parseInt(x);
+		f = Integer.parseInt(y);
+		avr = (m*0.4)+(f*0.6);
+		if (avr>=65)
+			JOptionPane.showMessageDialog(null, "Average: "+avr+ " You've passed!");
+		else
+			JOptionPane.showMessageDialog(null, "Average: "+avr+ " You've failed!");
+		
+		}catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Err in Input","ERROR", JOptionPane.ERROR_MESSAGE);	
+		}catch (ArithmeticException e){
+			JOptionPane.showMessageDialog(null, "Err in Input","ERROR", JOptionPane.ERROR_MESSAGE);
+		}
+	}
+
+}

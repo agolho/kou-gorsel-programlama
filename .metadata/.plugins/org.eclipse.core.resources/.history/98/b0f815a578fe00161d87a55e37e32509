@@ -1,0 +1,14 @@
+package helloworld;
+
+import javax.swing.JOptionPane;
+
+public class HelloWorldJava {
+
+	public static void main(String[] args) {
+		int a,b; String x,y;
+		x = JOptionPane.showInputDialog(null, "Input a number");
+		y = JOptionPane.showInputDialog(null, "Input a number");
+		JOptionPane.showMessageDialog(null, x+y);
+	}
+
+}

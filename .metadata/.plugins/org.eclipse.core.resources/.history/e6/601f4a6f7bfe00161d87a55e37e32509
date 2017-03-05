@@ -1,0 +1,22 @@
+package helloworld;
+
+import javax.swing.JOptionPane;
+
+public class HelloWorldJava {
+
+	public static void main(String[] args) {
+		int m,f; String x,y;
+		try{
+		x = JOptionPane.showInputDialog(null, "Midterm");
+		y = JOptionPane.showInputDialog(null, "Finals");
+		m = Integer.parseInt(x);
+		f = Integer.parseInt(y);
+		JOptionPane.showMessageDialog(null, (double)(m*0.4)+(f*0.6));
+		}catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Err in Input","ERROR", JOptionPane.ERROR_MESSAGE);	
+		}catch (ArithmeticException e){
+			JOptionPane.showMessageDialog(null, "Err in Input","ERROR", JOptionPane.ERROR_MESSAGE);
+		}
+	}
+
+}
